@@ -10,7 +10,11 @@ class AdditionView(View):
 
         return render(request,"add.html")
     def post(self,request,*args,**kwargs):
-        print("hello there!!!!!")
+        n1=request.POST.get("num1")
+        n2=request.POST.get("num2")
+        result=int(n1)+int(n2)
+        print(result)
+       
         return render(request,"add.html")
 
 class SubstractionView(View):

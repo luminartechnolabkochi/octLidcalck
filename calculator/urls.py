@@ -19,8 +19,13 @@ from operations import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   path("add/",views.AdditionView.as_view()),
-   path("sub/",views.SubstractionView.as_view()),
-   path("mul/",views.MultiplicationView.as_view())
+   path("add/",views.AdditionView.as_view(),name="addition"),
+   path("sub/",views.SubstractionView.as_view(),name="subtraction"),
+   path("mul/",views.MultiplicationView.as_view(),name="multiplication"),
+   path("fact/",views.FactorialView.as_view(),name="factorial"),
+   path("prime/",views.PrimeView.as_view(),name="prime"),
+   path("",views.IndexView.as_view(),name="home")
     
 ]
+
+

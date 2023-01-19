@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="text-center">Addition</h1>
+    <h1 class="text-center">PrimeNumber</h1>
    <div class="container">
     <div class="row">
         <div class="col-4"></div>
@@ -17,19 +17,17 @@
             <form action="" method="post">
                 {%csrf_token%}
                 <div class="mb-3">
-                    <input type="text"  placeholder="enter num1" name="num1" class="form-control">
+                    <input type="text"  placeholder="enter num1" name="num" class="form-control">
 
                 </div>
+               
                 <div class="mb-3">
-                    <input type="text" placeholder="enter num2" name="num2" class="form-control">
+                    <button type="submit" class="btn btn-info form-control">Prime</button>
 
                 </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-info form-control">Add</button>
-
-                </div>
+                {{out}}
          
-                 {{out}}
+                
              </form>
         </div>
         <div class="col-4"></div>
